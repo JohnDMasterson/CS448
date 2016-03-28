@@ -109,7 +109,6 @@ public class Predicate {
 
       case AttrType.INTEGER:
         comp = ((Integer) lval).compareTo((Integer) rval);
-        System.out.println(lval + " == " + rval + " :: " + comp);
         break;
 
       case AttrType.FLOAT:

@@ -263,7 +263,7 @@ class ROTest extends TestDriver {
 
 
 			Predicate sPred = new Predicate(AttrOperator.EQ,
-					AttrType.FIELDNO, 0, AttrType.FIELDNO, 0);
+					AttrType.FIELDNO, 0, AttrType.FIELDNO, 5);
 			SimpleJoin sjoin = new SimpleJoin(new FileScan(s_drivers, drivers),
 					new FileScan(s_rides, rides), sPred);
 			sjoin.execute();
@@ -352,9 +352,11 @@ class ROTest extends TestDriver {
 					new FileScan(s_rides, rides), 0, 1);
 			HashJoin join2 = new HashJoin(join1, new IndexScan(s_drivers, ixdrivers,
 					drivers), 2, 0);
+			join2.execute();
 			Selection sel = new Selection(join2, new Predicate(AttrOperator.LT,
 					AttrType.FIELDNO, 10, AttrType.FIELDNO, 0));
 			sel.execute();
+			//sel.execute();
 
 			// destroy temp files before doing final counts
 			sel = null;

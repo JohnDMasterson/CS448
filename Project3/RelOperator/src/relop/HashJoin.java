@@ -12,6 +12,9 @@ public class HashJoin extends Iterator {
     /**
      * Constructs a selection, given the underlying iterator and predicates.
      */
+    private Iterator left, right;
+    private boolean started;
+
     private IndexScan outer, inner;
     private int outerJoin, innerJoin;
 
@@ -24,18 +27,25 @@ public class HashJoin extends Iterator {
     private int iIndex;
 
 
-    public HashJoin(Iterator outer, Iterator inner, int i, int j) {
-        // build indexscan on outer
-        this.outer = new IndexScan(outer, i);
-        // build indexscan on inner
-        this.inner = new IndexScan(inner, j);
+    public HashJoin(Iterator left, Iterator right, int i, int j) {
+        this.started = false;
+        this.left = left;
+        this.right = right;
         this.outerJoin = i;
         this.innerJoin = j;
-        this.setSchema(Schema.join(outer.getSchema(), inner.getSchema()));
+        this.setSchema(Schema.join(left.getSchema(), right.getSchema()));
 
-        startProbing();
 
         //throw new UnsupportedOperationException("Not implemented");
+    }
+
+    private void start() {
+        started = true;
+        // build indexscan on outer
+        this.outer = new IndexScan(left, outerJoin);
+        // build indexscan on inner
+        this.inner = new IndexScan(right, innerJoin);
+        startProbing();
     }
 
     private void startProbing() {
@@ -70,8 +80,8 @@ public class HashJoin extends Iterator {
     public void explain(int depth) {
         this.indent(depth);
         System.out.println("HashJoin");
-        outer.explain(depth +1);
-        inner.explain(depth +1);
+        left.explain(depth +1);
+        right.explain(depth +1);
         //throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -105,6 +115,9 @@ public class HashJoin extends Iterator {
      * Returns true if there are more tuples, false otherwise.
      */
     public boolean hasNext() {
+        if(!started) {
+            start();
+        }
         // search current table for next match
         while(iTuples != null && iIndex < iTuples.length) {
             //check for equality on fields

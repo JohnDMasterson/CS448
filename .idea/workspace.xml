@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5f669ff-eace-4e49-aa3d-e80d2d62e16d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/HashJoin.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/HashJoin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Predicate.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Predicate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/tests/ROTest.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/tests/ROTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/fattyforhire.minibase" afterPath="$PROJECT_DIR$/Project3/RelOperator/fattyforhire.minibase" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/relop/HashJoin.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/relop/HashJoin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Predicate.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Predicate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java" />
     </list>
@@ -31,18 +33,63 @@
       <file leaf-file-name="ROTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.2777777">
+              <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Predicate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileScan.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/FileScan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.75">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predicate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Predicate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57768923">
-              <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="109" column="27" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Iterator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Iterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding>
+                <element signature="e#2214#2215#0" expanded="false" />
+                <element signature="e#2239#2240#0" expanded="false" />
+                <element signature="e#2268#2269#0" expanded="false" />
+                <element signature="e#2286#2287#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Selection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashJoin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/HashJoin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -64,8 +111,9 @@
         <option value="$PROJECT_DIR$/Project3/RelOperator/src/relop/KeyScan.java" />
         <option value="$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java" />
         <option value="$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java" />
-        <option value="$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java" />
         <option value="$PROJECT_DIR$/Project3/RelOperator/src/relop/Predicate.java" />
+        <option value="$PROJECT_DIR$/Project3/RelOperator/src/relop/HashJoin.java" />
+        <option value="$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java" />
       </list>
     </option>
   </component>
@@ -553,22 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Iterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6730769">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46153846">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="25" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7307692">
@@ -585,18 +617,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="263" column="0" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="e#2214#2215#0" expanded="false" />
+            <element signature="e#2239#2240#0" expanded="false" />
+            <element signature="e#2268#2269#0" expanded="false" />
+            <element signature="e#2286#2287#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/SampleData/Employee.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/HashJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57768923">
-          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2777777">
+          <caret line="272" column="25" selection-start-line="272" selection-start-column="25" selection-end-line="272" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/FileScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.75">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding />
         </state>
       </provider>

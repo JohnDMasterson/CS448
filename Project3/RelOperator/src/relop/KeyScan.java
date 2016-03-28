@@ -67,6 +67,12 @@ public class KeyScan extends Iterator {
    * Returns true if there are more tuples, false otherwise.
    */
   public boolean hasNext() {
+    System.out.println("new batch has next");
+    System.out.println(scan.hasNext());
+    System.out.println(scan.hasNext());
+    System.out.println(scan.hasNext());
+    System.out.println(scan.hasNext());
+    System.out.println(scan.hasNext());
     return scan.hasNext();
     //throw new UnsupportedOperationException("Not implemented");
   }

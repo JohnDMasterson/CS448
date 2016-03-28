@@ -135,11 +135,14 @@ public class HashJoin extends Iterator {
             int nextHashIndex = outer.getNextHash();
             oTuple = outer.getNext();
             oKey = outer.getLastKey();
+            //System.out.print("hash: " + nextHashIndex);
+            //System.out.println("tuple: " + oTuple.toString());
             // if the hash indexs dont match, rebuild hash table
             if(nextHashIndex != hashIndex) {
                 hashIndex = nextHashIndex;
                 buildBucket();
             }
+            iIndex = 0;
             // see if any tuples match
             while(iTuples != null && iIndex < iTuples.length) {
                 //check for equality on fields

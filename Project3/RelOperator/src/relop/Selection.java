@@ -23,6 +23,7 @@ public class Selection extends Iterator {
       this.preds.add(preds[i]);
     }
     next = null;
+    this.setSchema(iter.getSchema());
     //throw new UnsupportedOperationException("Not implemented");
   }
 

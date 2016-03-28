@@ -15,6 +15,7 @@ public class KeyScan extends Iterator {
   private SearchKey key;
   private HeapFile file;
   private HashScan scan;
+  private RID next;
 
   /**
    * Constructs an index scan, given the hash index and schema.
@@ -25,6 +26,7 @@ public class KeyScan extends Iterator {
     this.key = key;
     this.file = file;
     this.scan = index.openScan(key);
+    next = null;
     //throw new UnsupportedOperationException("Not implemented");
   }
 
@@ -67,13 +69,12 @@ public class KeyScan extends Iterator {
    * Returns true if there are more tuples, false otherwise.
    */
   public boolean hasNext() {
-    System.out.println("new batch has next");
-    System.out.println(scan.hasNext());
-    System.out.println(scan.hasNext());
-    System.out.println(scan.hasNext());
-    System.out.println(scan.hasNext());
-    System.out.println(scan.hasNext());
-    return scan.hasNext();
+    if(next == null) {
+      if(scan.hasNext()) {
+        next = scan.getNext();
+      }
+    }
+    return next != null;
     //throw new UnsupportedOperationException("Not implemented");
   }
 
@@ -84,7 +85,8 @@ public class KeyScan extends Iterator {
    */
   public Tuple getNext() {
     if(hasNext()) {
-      RID rid = scan.getNext();
+      RID rid = next;
+      next = null;
       byte[] recordData = file.selectRecord(rid);
       Schema schema = this.getSchema();
       return new Tuple(schema, recordData);

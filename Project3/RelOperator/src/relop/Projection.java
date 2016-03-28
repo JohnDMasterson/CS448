@@ -16,6 +16,7 @@ public class Projection extends Iterator {
 
   public Projection(Iterator iter, Integer... fields) {
     this.iter = iter;
+    this.fields = new LinkedList();
     for(int i=0; i<fields.length; i++) {
       this.fields.add(fields[i]);
     }

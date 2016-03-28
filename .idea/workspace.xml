@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5f669ff-eace-4e49-aa3d-e80d2d62e16d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/KeyScan.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/KeyScan.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Projection.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Projection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Selection.class" afterPath="$PROJECT_DIR$/Project3/RelOperator/bin/relop/Selection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/fattyforhire.minibase" afterPath="$PROJECT_DIR$/Project3/RelOperator/fattyforhire.minibase" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/relop/KeyScan.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/relop/KeyScan.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java" afterPath="$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java" />
     </list>
     <ignored path="CS448.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +26,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="ROTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Iterator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Iterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Selection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="25" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Projection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37848607">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.7307692">
+              <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Schema.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Schema.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -543,42 +579,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Schema.java">
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49800798">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6730769">
+        <state vertical-scroll-proportion="0.0">
           <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/tests/ROTest.java">
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Selection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="323" column="26" selection-start-line="323" selection-start-column="26" selection-end-line="323" selection-end-column="26" />
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Schema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project3/RelOperator/src/relop/Projection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37848607">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.7307692">
+          <caret line="88" column="49" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="49" />
           <folding />
         </state>
       </provider>

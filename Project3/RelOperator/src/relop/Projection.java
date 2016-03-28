@@ -17,9 +17,17 @@ public class Projection extends Iterator {
   public Projection(Iterator iter, Integer... fields) {
     this.iter = iter;
     this.fields = new LinkedList();
-    for(int i=0; i<fields.length; i++) {
-      this.fields.add(fields[i]);
+    int length = fields.length;
+    Schema postProj = new Schema(length);
+    Schema preProj = iter.getSchema();
+    for(int i=0; i<length; i++) {
+      //add fields to my linked list
+      int field = fields[i];
+      this.fields.add(field);
+      //setup schema
+      postProj.initField(i, preProj, field);
     }
+    this.setSchema(postProj);
     //throw new UnsupportedOperationException("Not implemented");
   }
 
@@ -77,8 +85,8 @@ public class Projection extends Iterator {
       Tuple preProj = iter.getNext();
       int i=0;
       for(i=0; i<fields.size(); i++){
-        ret.setField(i, preProj.getField(fields.get(i)));
-        i++;
+        int field = fields.get(i);
+        ret.setField(i, preProj.getField(field));
       }
       return ret;
     }

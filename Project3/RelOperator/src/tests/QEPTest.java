@@ -17,6 +17,7 @@ import relop.Schema;
 import relop.Selection;
 import relop.SimpleJoin;
 import relop.Tuple;
+import java.io.File;
 
 public class QEPTest extends TestDriver {
 
@@ -72,8 +73,9 @@ public class QEPTest extends TestDriver {
 		try {
 			System.out.println("\nTest 1: Display for each employee his ID, Name and Age");
 			
-			String name = "Employee.txt";
+			String name = "./src/tests/SampleData/Employee.txt";
 			HeapFile hpfile = new HeapFile(name);
+			hpfile.openScan();
 			System.out.println(hpfile.toString() + " getRecCnt=" + hpfile.getRecCnt());
 			FileScan scan = new FileScan(employee, hpfile);
 			Projection pro = new Projection(scan, 0,1,2);

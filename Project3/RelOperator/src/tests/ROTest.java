@@ -261,6 +261,13 @@ class ROTest extends TestDriver {
 					new FileScan(s_rides, rides), 0, 0);
 			join.execute();
 
+
+			Predicate sPred = new Predicate(AttrOperator.EQ,
+					AttrType.FIELDNO, 0, AttrType.FIELDNO, 0);
+			SimpleJoin sjoin = new SimpleJoin(new FileScan(s_drivers, drivers),
+					new FileScan(s_rides, rides), sPred);
+			sjoin.execute();
+
 			// destroy temp files before doing final counts
 			join = null;
 			rides = null;

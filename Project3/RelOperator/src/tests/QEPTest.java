@@ -170,7 +170,6 @@ public class QEPTest extends TestDriver {
 			System.out.println("\nTest 3: For each employee, display his Name and the Name of his department as well as the maximum salary of his department");
 
 			HashJoin join = new HashJoin(new FileScan(employee, empFile),new FileScan(dept, deptFile), 4,0);
-			//join.execute();
 			Projection pro = new Projection(join, 1, 6, 8);
 			pro.execute();
 

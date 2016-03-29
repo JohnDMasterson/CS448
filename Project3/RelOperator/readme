@@ -1,0 +1,6 @@
+CS 448 Project 3 - John Masterson, Kunal Agrawal
+Submission date - 3/28/2016
+
+For the HashJoin function, initRandom() had a predefined seed of 74 which didn't work for us for test3. The resulting data would never have tuples which matched our query, and the query wouldn't return any results. We took out the 74 and the HashJoin worked with results for test3. 
+
+Also the root folder (RelOperator) has two extra .minibase files with our usernames in the front. Just a note that there are extra files in the submission.

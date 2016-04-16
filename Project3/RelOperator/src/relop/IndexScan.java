@@ -137,7 +137,7 @@ public class IndexScan extends Iterator {
 
   /**
    * Gets the next tuple in the iteration.
-   * 
+   *
    * @throws IllegalStateException if no more tuples
    */
   public Tuple getNext() {

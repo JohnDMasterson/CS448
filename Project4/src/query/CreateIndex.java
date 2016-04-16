@@ -67,6 +67,9 @@ class CreateIndex implements Plan {
     // add the schema to the catalog
     Minibase.SystemCatalog.createIndex(fileName, ixTable, ixColumn);
 
+    // print the output message
+    System.out.println("Index created.");
+
   } // public void execute()
 
 } // class CreateIndex implements Plan

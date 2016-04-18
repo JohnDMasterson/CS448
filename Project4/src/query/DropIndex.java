@@ -1,7 +1,14 @@
 package query;
 
 import parser.AST_DropIndex;
-
+import relop.Schema;
+import global.RID;
+import heap.HeapFile;
+import heap.HeapScan;
+import index.HashIndex;
+import global.Minibase;
+import relop.Tuple;
+import global.SearchKey;
 /**
  * Execution plan for dropping indexes.
  */

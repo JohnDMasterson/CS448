@@ -42,7 +42,7 @@ class Insert implements Plan {
     for(int i=0; i<inds.length; i++) {
       IndexDesc index = inds[i];
       HashIndex hashIndex = new HashIndex(index.indexName);
-      SearchKey key = new SearchKey(index.columnName);
+      SearchKey key = new SearchKey(tuple.getField(index.columnName));
       hashIndex.insertEntry(key, rid);
     }
     // print the output message

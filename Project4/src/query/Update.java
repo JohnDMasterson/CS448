@@ -33,8 +33,8 @@ class Update implements Plan {
     values = tree.getValues();
     schema = QueryCheck.tableExists(fileName);
     columns = tree.getColumns();
-
-    // QueryCheck.insertValues(schema, values);
+    int[] fldnos = QueryCheck.updateFields(schema, columns);
+    QueryCheck.updateValues(schema, fldnos ,values);
   } // public Update(AST_Update tree) throws QueryException
 
   /**

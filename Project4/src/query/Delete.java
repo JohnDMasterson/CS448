@@ -29,6 +29,7 @@ class Delete implements Plan {
     fileName = tree.getFileName();
     predicates = tree.getPredicates();
     schema = QueryCheck.tableExists(fileName);
+    QueryCheck.predicates(schema, predicates);
   } // public Delete(AST_Delete tree) throws QueryException
 
   /**
@@ -44,19 +45,16 @@ class Delete implements Plan {
 
     while (heapscan.hasNext())
     {
-      Tuple tuple = new Tuple(schema, heapscan.getNext(rid));
-
       passAND = true;
+      Tuple tuple = new Tuple(schema, heapscan.getNext(rid));
       for (int i=0; i<predicates.length && passAND; i++)
       {
         passOR = false;
         for (int j=0; j<predicates[i].length && !passOR; j++)
         {
-          if (predicates[i][j].validate(schema)){
             if (predicates[i][j].evaluate(tuple)){
               passOR = true;
             }
-          }
         }
         if (!passOR)
           passAND = false;

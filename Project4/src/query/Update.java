@@ -34,7 +34,7 @@ class Update implements Plan {
     schema = QueryCheck.tableExists(fileName);
     columns = tree.getColumns();
 
-    QueryCheck.insertValues(schema, values);
+    // QueryCheck.insertValues(schema, values);
   } // public Update(AST_Update tree) throws QueryException
 
   /**
@@ -51,6 +51,8 @@ class Update implements Plan {
     while (heapscan.hasNext())
     {
       Tuple tuple = new Tuple(schema, heapscan.getNext(rid));
+
+      // Check to see if predicates hold
       passAND = true;
       for (int i=0; i<predicates.length && passAND; i++)
       {
@@ -65,7 +67,7 @@ class Update implements Plan {
         }
         if (!passOR)
           passAND = false;
-      }
+      } // end predicate check
 
       if (passAND)
       {
@@ -80,8 +82,7 @@ class Update implements Plan {
         } // end for
 
         // Next, insert updated ones
-        for (int i=0; i<values.length; i++)
-        {
+        for (int i=0; i<values.length; i++) {
           tuple.setField(columns[i], values[i]);
         }
         heapfile.updateRecord(rid, tuple.getData());

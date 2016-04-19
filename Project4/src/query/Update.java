@@ -9,7 +9,7 @@ import index.HashIndex;
 import global.Minibase;
 import relop.Tuple;
 import global.SearchKey;
-import relop.Schema;  
+import relop.Schema;
 
 /**
  * Execution plan for updating tuples.
@@ -24,7 +24,7 @@ class Update implements Plan {
 
   /**
    * Optimizes the plan, given the parsed query.
-   * 
+   *
    * @throws QueryException if invalid column names, values, or pedicates
    */
   public Update(AST_Update tree) throws QueryException {
@@ -35,6 +35,7 @@ class Update implements Plan {
     columns = tree.getColumns();
     int[] fldnos = QueryCheck.updateFields(schema, columns);
     QueryCheck.updateValues(schema, fldnos ,values);
+    QueryCheck.predicates(schema, predicates);
   } // public Update(AST_Update tree) throws QueryException
 
   /**
@@ -50,24 +51,20 @@ class Update implements Plan {
 
     while (heapscan.hasNext())
     {
-      Tuple tuple = new Tuple(schema, heapscan.getNext(rid));
-
-      // Check to see if predicates hold
       passAND = true;
+      Tuple tuple = new Tuple(schema, heapscan.getNext(rid));
       for (int i=0; i<predicates.length && passAND; i++)
       {
         passOR = false;
         for (int j=0; j<predicates[i].length && !passOR; j++)
         {
-          if (predicates[i][j].validate(schema)){
             if (predicates[i][j].evaluate(tuple)){
               passOR = true;
             }
-          }
         }
         if (!passOR)
           passAND = false;
-      } // end predicate check
+      }
 
       if (passAND)
       {

@@ -22,7 +22,7 @@ class Delete implements Plan {
 
   /**
    * Optimizes the plan, given the parsed query.
-   * 
+   *
    * @throws QueryException if table doesn't exist or predicates are invalid
    */
   public Delete(AST_Delete tree) throws QueryException {
@@ -33,7 +33,7 @@ class Delete implements Plan {
 
   /**
    * Executes the plan and prints applicable output.
-   */ 
+   */
   public void execute() {
     HeapFile heapfile = new HeapFile(fileName);
     HeapScan heapscan = heapfile.openScan();
@@ -51,8 +51,13 @@ class Delete implements Plan {
       {
         passOR = false;
         for (int j=0; j<predicates[i].length && !passOR; j++)
-          if (predicates[i][j].evaluate(tuple))
-            passOR = true;
+        {
+          if (predicates[i][j].validate(schema)){
+            if (predicates[i][j].evaluate(tuple)){
+              passOR = true;
+            }
+          }
+        }
         if (!passOR)
           passAND = false;
       }

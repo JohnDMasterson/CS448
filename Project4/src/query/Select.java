@@ -21,7 +21,7 @@ class Select implements Plan {
 
   /**
    * Optimizes the plan, given the parsed query.
-   * 
+   *
    * @throws QueryException if validation fails
    */
   public Select(AST_Select tree) throws QueryException {

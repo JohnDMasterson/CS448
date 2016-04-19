@@ -66,6 +66,7 @@ class Select implements Plan {
 
     // Selection and Projection
     for (int i=0; i < predicates.length; i++)
+      // We can split this in a for loop because every new selection is AND'd on top of the previous one
       iter = new Selection(iter, predicates[i]);
     if (columns.length > 0)
       iter = new Projection(iter, col);

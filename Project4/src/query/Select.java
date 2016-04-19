@@ -88,12 +88,12 @@ class Select implements Plan {
       else
       {
         ret = selectIterator.execute();
-
         // print the output message
         System.out.println(ret + " rows selected.");
       }
     }
     selectIterator.close();
+
   } // public void execute()
 
 } // class Select implements Plan

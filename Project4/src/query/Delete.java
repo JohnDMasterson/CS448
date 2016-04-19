@@ -70,7 +70,7 @@ class Delete implements Plan {
         {
           IndexDesc index = inds[i];
           HashIndex hashIndex = new HashIndex(index.indexName);
-          SearchKey key = new SearchKey(index.columnName);
+          SearchKey key = new SearchKey(tuple.getField(index.columnName));
           hashIndex.deleteEntry(key, rid);
         } // end for
         count++;

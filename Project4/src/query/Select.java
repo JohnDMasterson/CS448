@@ -65,11 +65,15 @@ class Select implements Plan {
     }
 
     // Selection and Projection
-    for (int i=0; i < predicates.length; i++)
+    for (int i=0; i < predicates.length; i++){
       // We can split this in a for loop because every new selection is AND'd on top of the previous one
-      iter = new Selection(iter, predicates[i]);
-    if (columns.length > 0)
-      iter = new Projection(iter, col);
+      Iterator newit = new Selection(iter, predicates[i]);
+      iter = newit;
+    }
+    if (columns.length > 0){
+      Iterator newit = new Projection(iter, col);
+      iter = newit;
+    }
 
     selectIterator = iter;
   } // public Select(AST_Select tree) throws QueryException
@@ -86,6 +90,7 @@ class Select implements Plan {
       else
       {
         ret = selectIterator.execute();
+        selectIterator.close();
         // print the output message
         System.out.println(ret + " rows selected.");
       }

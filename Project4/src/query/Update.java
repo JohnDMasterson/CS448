@@ -74,7 +74,7 @@ class Update implements Plan {
         {
           IndexDesc index = inds[i];
           HashIndex hashIndex = new HashIndex(index.indexName);
-          SearchKey key = new SearchKey(index.columnName);
+          SearchKey key = new SearchKey(tuple.getField(index.columnName));
           hashIndex.deleteEntry(key, rid);
         } // end for
 
@@ -94,6 +94,7 @@ class Update implements Plan {
         count++;
       } // end if
     } // end while
+    heapscan.close();
 
     // print the output message
     System.out.println(count + " rows affected.");

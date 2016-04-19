@@ -74,6 +74,7 @@ class Delete implements Plan {
         count++;
       } // end if
     } // end while
+    heapscan.close();
 
     // print the output message
     System.out.println(count + " rows affected.");

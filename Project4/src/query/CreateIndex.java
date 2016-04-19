@@ -63,6 +63,7 @@ class CreateIndex implements Plan {
       SearchKey searchKey = new SearchKey(tuple.getField(ixColumn));
       hashIndex.insertEntry(searchKey, rid);
     }
+    heapScan.close();
 
     // add the schema to the catalog
     Minibase.SystemCatalog.createIndex(fileName, ixTable, ixColumn);

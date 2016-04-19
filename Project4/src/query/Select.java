@@ -67,12 +67,10 @@ class Select implements Plan {
     // Selection and Projection
     for (int i=0; i < predicates.length; i++){
       // We can split this in a for loop because every new selection is AND'd on top of the previous one
-      Iterator newit = new Selection(iter, predicates[i]);
-      iter = newit;
+      iter = new Selection(iter, predicates[i]);
     }
     if (columns.length > 0){
-      Iterator newit = new Projection(iter, col);
-      iter = newit;
+      iter = new Projection(iter, col);
     }
 
     selectIterator = iter;
@@ -90,11 +88,12 @@ class Select implements Plan {
       else
       {
         ret = selectIterator.execute();
-        selectIterator.close();
         // print the output message
         System.out.println(ret + " rows selected.");
       }
     }
+
+    selectIterator.close();
 
   } // public void execute()
 
